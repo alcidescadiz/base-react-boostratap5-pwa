@@ -1,10 +1,13 @@
-import React from 'react';
+import ContadorReducer from './components/contadorReducer';
+import ContadorState from './components/contadorState';
 
 
 function App() {
+
   return (
     <div className="container h1">
-      <p>Hello wold</p>
+      <ContadorState />
+      <ContadorReducer />
     </div>
   );
 }
