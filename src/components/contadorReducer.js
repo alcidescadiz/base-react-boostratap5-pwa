@@ -20,6 +20,7 @@ function reducer(num, action) {
 function ContadorReducer() {
    let [num, setNum]= useReducer(reducer, initialState)
 
+
   return (
     <div className="container h1">
       <h1>Ejemplo Contador con useState</h1>
