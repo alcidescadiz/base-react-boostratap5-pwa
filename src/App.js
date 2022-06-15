@@ -1,21 +1,18 @@
-import ContadorReducer from './components/contadorReducer';
-import ContadorState from './components/contadorState';
-import { GlobalContextComponent } from './components/contextReducer';
-import FetchReducer from './components/fetchReducer';
-import VariosFetch from './components/VariosFetch';
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import SearchPage from "./components/Search";
+import ShowShelf from "./components/ShowShelf";
+import WatchList from "./components/WatchList";
 
 function App() {
-
   return (
-    <div className="container h1">
-      <GlobalContextComponent>
-        <ContadorState />
-        <ContadorReducer />
-        <VariosFetch />
-        <FetchReducer />
-      </GlobalContextComponent>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<ShowShelf />} />
+        
+        <Route path="/my-watch-list" element={<WatchList />} />
+      </Routes>
+    </Router>
   );
 }
 
